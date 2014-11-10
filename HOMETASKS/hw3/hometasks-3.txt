@@ -1,0 +1,87 @@
+Задание 1: И снова гласные.
+
+УСЛОВИЕ:
+Посчитать количество гласных в каждом слове текста.
+Вывести максимальное количество гласных в одном слове.
+
+Текст:
+Proin eget tortor risus. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec rutrum congue leo eget malesuada.
+
+Гласные: A, E, I, O, U, Y
+
+================================================================================
+
+Задание 2: Самое длинное слово.
+
+УСЛОВИЕ:
+Найти слово максимальной длины в тексте.
+Вывести это слово. Если таких слов несколько - вывести все.
+
+Текст:
+Proin eget tortor risus. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec rutrum congue leo eget malesuada.
+
+================================================================================
+
+Задание 3: Реверс'em!
+
+УСЛОВИЕ:
+Изменить в тексте порядок следования:
+- букв в словах;
+- слов в предложениях;
+- предложений в тексте.
+Вывести модифицированный текст.
+
+Текст:
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Cras ultricies ligula sed magna dictum porta.
+
+================================================================================
+
+Задание 4: Imports.
+
+УСЛОВИЕ:
+Произвести импортирование модулей стандартной библиотеки Python: "os" и "sys".
+Вывести справку по всем функциям каждого модуля.
+
+================================================================================
+
+Задание 5: Псевдосумма.
+
+УСЛОВИЕ:
+Принимать любое натуральное число.
+Выдавать сумму цифр, из которых число состоит.
+Не использовать оператор "+" и встроенную функцию sum().
+
+Пример:
+456 >> 15
+
+================================================================================
+
+Задание 6: Простые числа. (бонусное)
+
+УСЛОВИЕ:
+Вывести на печать 10000 первых натуральных простых чисел.
+Напомню, что это те, которые делятся без остатка не себя и 1, начиная с числа 2.
+
+================================================================================
+
+Задание 7: Реверс'em all! (бонусное)
+
+УСЛОВИЕ:
+Выполнить задание 3 с сохранением позиций:
+- знаков препинания ("word," >> "drow,");
+- Заглавных букв в начале предложения ("Word ..." >> "Drow ...").
+
+================================================================================
+
+Задание 8: A-a-a (бонусное)
+
+УСЛОВИЕ:
+Посчитать в тексте количество букв "a" при условии что она окружена согласными
+("car") и она не является первой или последней буквой слова.
+
+Текст:
+Cras ultricies ligula sed magna dictum porta. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor lectus nibh.
+
+Согласные: все, кроме A, E, I, O, U, Y
+
+================================================================================

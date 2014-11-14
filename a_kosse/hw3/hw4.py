@@ -12,3 +12,6 @@ import sys
 if __name__ == "__main__":
     print_help(os)
     print_help(sys)
+
+
+# желательно ориентироваться на атрибут объектов __doc__

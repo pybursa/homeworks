@@ -1,0 +1,2 @@
+
+print max("Pron eget tortor risus . Cras ultricies ligula sed magna dictum porta . Proin eget tortor risus . Curabitur non nulla sit amet nisl tempus convallis quis ac lectus . Donec rutrum congue leo eget melesuada .".split(),key=len)

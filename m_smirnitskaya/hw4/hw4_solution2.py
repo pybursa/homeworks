@@ -23,6 +23,14 @@ output = "Pro..."
 """
 
 def solution2(st, n=5):
+    """
+    The function splits the string to fit into the limit
+    What to do:
+    1. check if the limit is less than the length of the first word
+    2. check if the limit is more than the length of the string
+    3. if the limit points to a whitespace, do not cut any words and show the substring
+    4. else: cut the last word and show the substring
+    """
     i = n
     l = st.split(" ")
     if n < len(l[0]):

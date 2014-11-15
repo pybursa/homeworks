@@ -12,6 +12,14 @@ u"""
 "ABCda" >> {'a': 40.0, 'b': 20.0, 'c': 20.0, 'd': 20.0}
 """
 def solution1(st):
+	"""
+	This function creates a dictionary where keys are the characters and the values
+	show the percentage of how many times this character occurs in the string.
+	What to do:
+	1. lower the string
+	2. dictionary (char - how many times)
+	3. change the value to calculate percentage
+	""" 
 	dic = {}
 	for i in st.lower():
 	    if dic.has_key(i):

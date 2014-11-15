@@ -24,7 +24,7 @@ def starter():
 	print "------- TASK #1 -------"
 	print INPUT
 	print " >> "
-	print hw4_solution1.solution1(INPUT)
+	print hw4_solution1.solution1("ABCda")
 	print "------- TASK #2 -------"
 	print INPUT
 	print " >> "

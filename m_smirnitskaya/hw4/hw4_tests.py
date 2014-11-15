@@ -15,9 +15,19 @@ INPUT = "Proin eget tortor risus. Cras ultricies ligula sed magna dictum porta. 
 Donec rutrum congue leo eget malesuada."
 
 def tests_for_solution1():
-	assert hw4_solution1.solution1(INPUT) == {'a': 7.3, ' ': 14.5, 'c': 4.5,\
-	 'e': 9.1, 'd': 3.6, 'g': 4.5, 'i': 5.5, 'm': 3.6, 'l': 4.5, 'o': 6.4,\
-	  'n': 3.6, 'p': 1.8, 's': 5.5, 'r': 8.2, 'u': 7.3, 't': 7.3, '.': 2.7}
+	u"""Tests for task 1"""
+	assert hw4_solution1.solution1("A") == {'a': 100.0}
+	assert hw4_solution1.solution1("ABCda") == {'a': 40.0, 'b': 20.0, 'c': 20.0, 'd': 20.0}
+	assert hw4_solution1.solution1("AsBCda") == {'a': 33.3, 'b': 16.7, 'c': 16.7, 'd': 16.7, 's': 16.7}
+	assert hw4_solution1.solution1("q TyU#!{}.") == {'q': 25.0, 't': 25.0, 'y': 25.0, 'u': 25.0}
+	assert sum(hw4_solution1.solution1("q TyU#!{}.").values()) == 100.0
 	  
 def tests_for_solution2():
+	u"""Tests for task 2"""
+	text = "Proin eget tortor risus."
 	assert hw4_solution2.solution2(INPUT) == "Proin..."
+	assert hw4_solution2.hw4_solution2(text) == "Proin eget tortor risus."
+	assert hw4_solution2.solution2(text, 24) == "Proin eget tortor risus."
+	assert hw4_solution2.solution2(text, 23) == "Proin eget tortor..."
+	assert hw4_solution2.solution2(text, 13) == "Proin eget..."
+	assert hw4_solution2.solution2(text, 6) == "Pro..."

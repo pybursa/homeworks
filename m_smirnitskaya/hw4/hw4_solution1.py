@@ -24,10 +24,11 @@ def solution1(st):
 	for i in st.lower():
 	    if dic.has_key(i):
 		     dic[i] += 1
-	    else:
+	    elif i.isalpha():
 		    dic[i] = 1
+	
 	for i in dic.keys():
-	    dic[i] = round(dic[i] * 100.0 / len(st), 1)
+	    dic[i] = dic[i] * 100.0 / len(st)
 
 	return dic
 

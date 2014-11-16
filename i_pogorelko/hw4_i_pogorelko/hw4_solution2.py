@@ -14,20 +14,19 @@ def ellipsis_1(text,limit=0):
 #    print 'lengthstr: ', lengthstr
 #    print 'limit: ', limit
 
-    if limit == 0:
-#        print 'text3: ', text
+    if limit == 0 or limit >= len(text):
+#        print 'text1: ', text
         return text
 
-    if limit >= len(text):
-#        print 'text2: ', text
-        return text
+    if limit < 3:
+        return 'the limit is very small'
 
-    if limit <= lengthstr and limit > 3:
-        print 'text1: ', countstring(text, (limit - 3)) + "..."
+    if limit-1 <= lengthstr:
+#        print 'text2: ', countstring(text, (limit - 3)) + "..."
         return countstring(text, limit-3) + "..."
    
     if text[limit] in symbols:
-#        print 'test5: ', countstring(text, limit)
+#        print 'test3: ', countstring(text, limit)
         return countstring(text, limit)
     else:
         while True:

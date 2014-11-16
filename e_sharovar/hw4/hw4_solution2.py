@@ -1,12 +1,9 @@
-#!/usr/bin/env python
-
 """
-Homework 4, task 1
+Homework 4, task 2
 Count percentage of each letter in a string
 """
 
 __author__ = "Elena Sharovar"
-__email__ = "elenasharovar@gmail.com"
 __date__ = '2014-11-16'
 
 def ellipsis_1(text, limit = 0):

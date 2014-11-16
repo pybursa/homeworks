@@ -10,6 +10,7 @@ u"""
 приравниваются. Вывести словарь: ключ - буква, значение - процент \
 (до десятых), в котором эта буква встречается в тексте.
 
+
 Текст:
 Proin eget tortor risus. Cras ultricies ligula sed magna dictum porta. \
 Donec rutrum congue leo eget malesuada.

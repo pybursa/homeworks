@@ -1,6 +1,6 @@
 """
 Homework 4, task 2
-Count percentage of each letter in a string
+Ellipsis for a string
 """
 
 __author__ = "Elena Sharovar"

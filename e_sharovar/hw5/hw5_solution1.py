@@ -10,13 +10,12 @@ import datetime
 
 class Person(object):
     def __init__(self, surname, first_name, birth_date, nickname = None):
+        date_elements = birth_date.split("-")
+        date_elements = map(int, date_elements)
+
         self.surname = surname
         self.first_name = first_name
-
-        elements = birth_date.split("-")
-        elements = map(int, elements)
-        self.birth_date = datetime.date(elements[0], elements[1], elements[2])
-
+        self.birth_date = datetime.date(date_elements[0], date_elements[1], date_elements[2])
         if nickname is not None:
             self.nickname = nickname
 
@@ -25,6 +24,14 @@ class Person(object):
 
     def get_age(self):
         now = datetime.datetime.now()
-        return str(now.year - self.birth_date.year)
+        age = now.year - self.birth_date.year
+        # month did not came yet
+        if (now.month < self.birth_date.month):
+            age -= 1
+        # day did not came yet
+        if now.month == self.birth_date.month:
+            if now.day < self.birth_date.day:
+                age -= 1
+        return str(age)
 
 

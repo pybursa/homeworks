@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 from datetime import datetime
 
 
@@ -6,7 +9,8 @@ class Person(object):
         self.surname = surName
         self.first_name = firstName
         self.birth_date = datetime.strptime(birth_date, '%Y-%m-%d').date()
-        self.nickname = nickname
+        if nickname is not None:
+            self.nickname = nickname
 
     def get_age(self):
         return str(int(((datetime.now() - datetime(self.birth_date.year, self.birth_date.month, self.birth_date.day)).days / 365.0)))

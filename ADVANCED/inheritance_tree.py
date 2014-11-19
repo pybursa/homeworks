@@ -55,6 +55,7 @@ print "+" * 79
 
 
 print obj.__class__
+print D.__bases__
 print type(obj)
 print type(D)
 print getattr(D, "__mro__", None)     # new style classes only

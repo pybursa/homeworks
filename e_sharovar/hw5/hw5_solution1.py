@@ -1,3 +1,8 @@
+"""
+Homework 5, task 1
+Person class
+"""
+
 __author__ = "Elena Sharovar"
 __date__ = '2014-11-19'
 
@@ -9,10 +14,8 @@ class Person(object):
         self.first_name = first_name
 
         elements = birth_date.split("-")
-        year = int(elements[0])
-        month = int(elements[1])
-        day = int(elements[2])
-        self.birth_date = datetime.date(year, month, day)
+        elements = map(int, elements)
+        self.birth_date = datetime.date(elements[0], elements[1], elements[2])
 
         if nickname is not None:
             self.nickname = nickname

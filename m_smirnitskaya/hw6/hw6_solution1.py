@@ -12,7 +12,7 @@ def modifier(file):
     This function accepts a csv file and modifies it according to the task:
     creates Person classes, adds fullname and age columns
     """
-    fp = open(file, "r+")
+    fp = open(file, "r")
     csv_reader = csv.reader(fp)
     new = []
     for i in csv_reader:

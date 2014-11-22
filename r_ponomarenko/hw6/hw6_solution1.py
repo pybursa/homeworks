@@ -60,12 +60,12 @@ def modifier(filename):
 
     phonebook = []
     for row in csv_data:
-        nickname = row[NICKNAME] and row[NICKNAME] or None
         phonebook.append(Person(row[SURNAME],
-                                row[NAME], row[BIRTHDATE], nickname))
+                                row[NAME], row[BIRTHDATE],
+                                row[NICKNAME].strip() or None))
 
     with open(filename, 'wb') as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, delimiter=",")
         writer.writerow([ID, SURNAME, NAME, FULLNAME,
                          BIRTHDATE, NICKNAME, AGE])
         for index, row in enumerate(phonebook):

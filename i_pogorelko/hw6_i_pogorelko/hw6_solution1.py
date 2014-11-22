@@ -5,9 +5,11 @@ __author__ = "pro"
 __email__ = "i.pogorelko@gmail.com"
 __date__ = "2014-11-22"
 
+import sys
 import csv
 import datetime
 from datetime import date
+
 
 def modifier(filename):
 
@@ -45,6 +47,8 @@ def modifier(filename):
         reader = csv.reader(csvfile, delimiter=',', quotechar='|')
         n = 0
         for row in reader:
+            if len(row) > 5:
+                sys.exit('This CSV was already modified')
             if n > 0:
                 if row[4] != '':
                     user = Person(row[0], row[1], row[2], row[3], row[4])
@@ -62,7 +66,7 @@ def modifier(filename):
         writer.writerow(['id','surname','name','fullname','birthdate','nickname','age'])
         for row in b:
             #print row
-            writer.writerow([row.ident, row.surname, row.name, row.get_fullname(), row.birth_date, row.nickname, row.get_age()])
+            writer.writerow([row.ident, row.surname, row.name, row.get_fullname(), \
+ row.birth_date, row.nickname, row.get_age()])
             #print b
     fp.close()
-

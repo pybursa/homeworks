@@ -1,13 +1,8 @@
-# -*- coding: utf8 -*-
+﻿# -*- coding: utf-8 -*-
+# Tests for Home Assignment 5
 
-u"""
-Тесты на ДЗ#5.
-"""
-
-__author__ = "wowkalucky"
-__email__ = "wowkalucky@gmail.com"
-__date__ = "2014-11-17"
-
+__author__ = "a_lusher"
+__date__ = "2014-11-12"
 
 import datetime
 
@@ -15,7 +10,8 @@ from hw5_solution1 import Person
 
 
 def tests_for_hw5_solution1():
-    u"""Тесты задачи 1"""
+    # tests for solution1
+
     petroff = Person("Petrov", "Petro", "1952-01-02")
     ivanoff = Person("Ivanov", "Ivan", "2000-10-20")
     sydoroff = Person("Sidorov", "Semen", "1980-12-31", "Senya")
@@ -33,5 +29,3 @@ def tests_for_hw5_solution1():
     assert petroff.birth_date == datetime.date(1952, 01, 02)
     assert isinstance(petroff.birth_date, datetime.date)
     assert petroff.get_age() == "62"
-
-    print 'All is Ok!'

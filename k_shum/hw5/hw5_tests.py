@@ -4,9 +4,9 @@ u"""
 Тесты на ДЗ#5.
 """
 
-__author__ = "wowkalucky"
-__email__ = "wowkalucky@gmail.com"
-__date__ = "2014-11-17"
+__author__ = "k.shym"
+__email__ = "ks.shym@gmail.com"
+__date__ = "2014-11-18"
 
 
 import datetime
@@ -33,5 +33,3 @@ def tests_for_hw5_solution1():
     assert petroff.birth_date == datetime.date(1952, 01, 02)
     assert isinstance(petroff.birth_date, datetime.date)
     assert petroff.get_age() == "62"
-
-    print 'All is Ok!'

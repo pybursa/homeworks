@@ -4,10 +4,11 @@ u"""
 Тесты на ДЗ#5.
 """
 
-__author__ = "wowkalucky"
-__email__ = "wowkalucky@gmail.com"
-__date__ = "2014-11-17"
-
+__author__ = "Alexander Kosse aka a_kosse"
+__email__ = "aleksandr.kosse@gmail.com"
+__date__ = "2014-11-18"
+__license__ = "GPL"
+__version__ = "0.0.1"
 
 import datetime
 
@@ -33,5 +34,3 @@ def tests_for_hw5_solution1():
     assert petroff.birth_date == datetime.date(1952, 01, 02)
     assert isinstance(petroff.birth_date, datetime.date)
     assert petroff.get_age() == "62"
-
-    print 'All is Ok!'

@@ -33,5 +33,3 @@ def tests_for_hw5_solution1():
     assert petroff.birth_date == datetime.date(1952, 01, 02)
     assert isinstance(petroff.birth_date, datetime.date)
     assert petroff.get_age() == "62"
-
-    print 'All is Ok!'

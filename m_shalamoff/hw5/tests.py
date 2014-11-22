@@ -4,17 +4,15 @@ u"""
 Тесты на ДЗ#5.
 """
 
-__author__ = "wowkalucky"
-__email__ = "wowkalucky@gmail.com"
-__date__ = "2014-11-17"
+__author__ = "m_shalamov"
 
 
 import datetime
 
-from hw5_solution1 import Person
+from task_one import Person
 
 
-def tests_for_hw5_solution1():
+def tests_for_task_one():
     u"""Тесты задачи 1"""
     petroff = Person("Petrov", "Petro", "1952-01-02")
     ivanoff = Person("Ivanov", "Ivan", "2000-10-20")

@@ -4,9 +4,8 @@ u"""
 Тесты на ДЗ#5.
 """
 
-__author__ = "wowkalucky"
-__email__ = "wowkalucky@gmail.com"
-__date__ = "2014-11-17"
+__author__ = "a_kushnaryoff"
+__date__ = "2014-11-19"
 
 
 import datetime

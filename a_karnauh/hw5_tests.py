@@ -4,13 +4,12 @@ u"""
 Тесты на ДЗ#5.
 """
 
-__author__ = "wowkalucky"
-__email__ = "wowkalucky@gmail.com"
-__date__ = "2014-11-17"
+__author__ = "anna-karnaukh"
+__email__ = "anna.karnaukh1@gmail.com"
+__date__ = "2014-11-19"
 
 
 import datetime
-
 from hw5_solution1 import Person
 
 

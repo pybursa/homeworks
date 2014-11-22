@@ -19,6 +19,7 @@ def tests_for_hw5_solution1():
     petroff = Person("Petrov", "Petro", "1952-01-02")
     ivanoff = Person("Ivanov", "Ivan", "2000-10-20")
     sydoroff = Person("Sidorov", "Semen", "1980-12-31", "Senya")
+    kozloff = Person("Kozlov", "Viktor", "1980-11-22", "Vitek")
 
     assert "first_name" in dir(petroff)
     assert "get_fullname" in dir(ivanoff)
@@ -33,5 +34,11 @@ def tests_for_hw5_solution1():
     assert petroff.birth_date == datetime.date(1952, 01, 02)
     assert isinstance(petroff.birth_date, datetime.date)
     assert petroff.get_age() == "62"
+
+    assert sydoroff.birth_date == datetime.date(1980, 12, 31)
+    assert sydoroff.get_age() == "33"
+
+    assert kozloff.get_age() == "33"
+
 
     print 'All is Ok!'

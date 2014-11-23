@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-u"""
-Основной скрипт запуска ДЗ#4.
+"""
+Main script for HM#4.
 
-Данный скрипт призван запускать на выполнение домашнее задание #4.
-Также выполняется комплекс тестов из модуля набора тестов.
+This script is designed to run homework #4.
+Also executes a set of tests from the test suite module.
 """
 
-__author__ = "wowkalucky"
-__email__ = "wowkalucky@gmail.com"
-__date__ = "2014-11-14"
+__author__ = "rm_ponomarenko"
+__email__ = "ponomarenko.roman@gmail.com"
+__date__ = "2014-11-18"
 
 
 import hw4_solution1
@@ -24,9 +24,8 @@ dictum porta. Donec rutrum congue leo eget malesuada."""
 
 
 def runner():
-    u"""Запускает выполнение всех задач"""
+    """Starts execution of all tasks"""
     print INPUT_1, ">>\n", hw4_solution1.percentage_1(INPUT_1)
-    print INPUT_1, ">>\n", hw4_solution1.percentage_2(INPUT_1)
 
     print INPUT_2, ">>\n", hw4_solution2.ellipsis_1(INPUT_2)
     print INPUT_2, ">>\n", hw4_solution2.ellipsis_1(INPUT_2, 10)

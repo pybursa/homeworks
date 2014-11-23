@@ -41,7 +41,6 @@ def modifier(filename):
                     writer.writerow(row+["Age"])
                 else:
                     writer.writerow(row+[""])
-                    row.insert(1, "")
      
     csv_in.close()
     csv_out.close()

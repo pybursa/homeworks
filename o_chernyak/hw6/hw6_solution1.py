@@ -18,6 +18,7 @@ __date__ = "2014-11-23"
 import csv
 from hw5_solution1 import Person
 
+
 def csv_to_class():
     with open('data.csv','r') as csv_in:
         extract = csv.DictReader(csv_in, dialect='excel')

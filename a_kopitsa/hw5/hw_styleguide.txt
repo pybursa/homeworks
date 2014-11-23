@@ -1,0 +1,124 @@
+Resources:
+- PEP 8 (Style Guide for Python Code) - http://legacy.python.org/dev/peps/pep-0008/
+- PEP 257 (Docstring Conventions) - http://legacy.python.org/dev/peps/pep-0257/
+- PEP 263 (Defining Python Source Code Encodings) -  http://legacy.python.org/dev/peps/pep-0263/
+
+
+Шабэнг:
+для того, чтобы модуль мог быть запускаемым напрямую на Unix-like системах, в начале файла необходимо добавлять
+специальную строку - так называемый "Shebang Line".
+Добавляем только в файлах, которые проектируются для непосредственного запуска, другими словами - в библиотеки
+не добавляем (есть исключения, например, если в конце модуля написаны самотесты).
+
+Пример:
+#!/usr/bin/env python
+
+
+Кодировка:
+в случае, когда модуль содержит Юникод-символы, которые не входят в состав кодировки ascii, необходимо подсказать
+интерпретатору как их кодировать при выводе.
+
+Пример:
+# -*- coding: <encoding name> -*-
+или
+# coding=<encoding name>
+где
+<encoding name> обычно равно utf-8
+
+
+Описание модуля:
+в начале каждого файла Вашей программы (особенно если данный файл представляет собой набор утилит для
+дальнейшего импортирования, то бишь - библиотеку) необходимо иметь описание данного модуля. Если строка описания
+длинная (многострочная), то необходимо в первую строку вынести основной смысл описания модуля, а после переноса строки
+уже делать развернутое описание. При наличии юникода строку делаем юникодной u""" ... """.
+
+Пример:
+u"""
+Стилевые требования для оформления домашний заданий.
+
+Данный модуль является стилевым гидом для оформления решений домашних заданий, каждое домашнее задание бла-бла-
+бла... Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor
+volutpat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur non nulla sit amet nisl tempus
+convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Vivamus magna justo, lacinia eget consectetur sed,
+convallis at tellus. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh
+pulvinar a. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat.
+"""
+
+
+Дополнительная информация - метаданные:
+этот блок обязателен, когда вы создаете библиотеку для распространения - разного рода информация (имя автора, права,
+соавторы, лицензия, версия ...).
+
+Пример:
+__author__ = "Alexander Kosse aka a_kosse"
+__copyright__ = "Copyright 2014, The Homework Project"
+__credits__ = ["Andrey Kopitsa aka a_kopitsa", "Alexander Berezovsky aka a_berezovsky"]
+__license__ = "GPL"
+__version__ = "0.0.1"
+__maintainer__ = "Alexander Kosse"
+__email__ = "kosse@mail.me"
+__status__ = "Production"
+
+также могут быть указаны __authors__, __contact__, __deprecated__, __date__
+
+
+Импорты:
+существует определенная договоренность в порядке следования инструкций import (from ... import ...).
+- сначала импортируем встроенные модули (os, sys, datetime ...);
+- потом сторонние утилиты (third-party modules, некие дополнительно установленные python-программы);
+- затем уже все остальные.
+
+Пример:
+import sys
+import time
+
+import Tkinter
+
+from django.db import models
+
+
+Описания объектов:
+строки документирования функция, класов, методов... желательно делать на универсальном английском,
+в учебных целях и для сугубо "местных" проектов - юникодная строка.
+
+Пример:
+def function(a, b):
+    """function(a, b) -> list"""
+
+def function(a, b):
+    """Do X and return a list."""
+
+def function(a, b):
+    u"""Функция принимает два элемента (a, b), возвращает список этих элементов"""
+
+
+Скриптовый (тестовый) блок:
+если мы проектируем модуль как такой, что может запускаться самостоятельно или из консоли, или другой программой -
+необходимо описать это поведение отдельно через условную инструкцию.
+
+Пример:
+if __name__ == '__main__':      # run tests if called from command-line
+    some_test_suit()            # набор тестов
+
+
+Структура модулей (файлов) при оформлении ДЗ:
+помимо оформления каждого модуля (файла) устанавливается структура файлов, как код домашнего задания должен размещаться
+по отдельным файлам.
+
+в папке Вашего пользователя должна быть следующая структура модулей:
+aa_example/
+├── hw1
+├── hw2
+└── hw3
+    ├── hw3_solution1.py
+    ├── hw3_solution2.py
+    ├── hw3_solution3.py
+    ├── hw3_starter.py
+    └── hw3_tests.py
+
+hw3_starter.py      -   основной скрипт, призванный запускать все компоненты;
+hw3_solution<N>.py  -   модуль содержащий решение (или решения) конкретной задачи N, оформленные в виде функций,
+                        в дальнейшем, возможно, классов;
+hw3_tests.py        -   набор тестов, которые должны выполняться по отношению к решению ДЗ.
+
+Комплексный пример оформления ДЗ можно найти в здесь(ссылка).

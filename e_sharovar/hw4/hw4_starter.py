@@ -19,8 +19,8 @@ from hw4_tests import tests_for_hw4_solution1, tests_for_hw4_solution2
 
 
 INPUT_1 = "AsBCda"
-INPUT_2 = """Proin eget tortor risus. Cras ultricies ligula sed magna \
-dictum porta. Donec rutrum congue leo eget malesuada."""
+INPUT_2 = """Proin eget tortor risus. Cras ultricies ligula sed magna dictum porta. \
+Donec rutrum congue leo eget malesuada."""
 
 
 def runner():

@@ -31,12 +31,11 @@ from datetime import date
 
 class Person(object):
     u"""Класс отображает запись в книге контактов."""
-
     def __init__(self, surname, first_name, birth_date, nickname=None):
         u"""Конструктор класса"""
         self.surname = surname
         self.first_name = first_name
-        if nickname:
+        if nickname is not None:
             self.nickname = nickname
         self.birth_date = datetime.strptime(birth_date, '%Y-%m-%d').date()
 
